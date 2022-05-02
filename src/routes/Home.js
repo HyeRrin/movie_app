@@ -55,6 +55,7 @@ function Home() {
               title={adventure.title}
               year={adventure.year}
               rating={adventure.rating}
+              url={adventure.url}
             />
           ))}
           <h2>Animation</h2>
@@ -66,6 +67,7 @@ function Home() {
               title={animation.title}
               year={animation.year}
               rating={animation.rating}
+              url={animation.url}
             />
           ))}
           <h2>Crime</h2>
@@ -77,6 +79,7 @@ function Home() {
               title={crime.title}
               year={crime.year}
               rating={crime.rating}
+              url={crime.url}
             />
           ))}
         </div>

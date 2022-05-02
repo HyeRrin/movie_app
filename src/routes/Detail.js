@@ -35,6 +35,9 @@ function Detail() {
               <li key={g}>{g}</li>
             ))}
           </ul>
+          <button onClick={() => window.open(`${movie.url}`, "_blank")}>
+            다운로드 페이지
+          </button>
         </div>
       )}
     </div>
