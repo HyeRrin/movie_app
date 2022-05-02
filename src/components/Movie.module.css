@@ -12,6 +12,7 @@
   color: white;
   background-color: rgb(53, 52, 52);
   padding: 0 0 30px 0;
+  border: 1px solid black;
 }
 .card_movie img {
   border-radius: 15px 15px 0 0;
@@ -19,6 +20,9 @@
 .card_movie h2 {
   font-size: 20px;
   margin: 10px 0 10px 15px;
+}
+.card_movie:hover {
+  border: 1px solid white;
 }
 .text_rating::before {
   content: "★";
