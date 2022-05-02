@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Movie from "../components/Movie";
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -24,6 +25,15 @@ function Home() {
         <div>
           <h1>Movie Ranking</h1>
           <p>Based on download count</p>
+          {movies.map((movie) => (
+            <Movie
+              key={movie.id}
+              coverImg={movie.medium_cover_image}
+              title={movie.title}
+              year={movie.year}
+              rating={movie.rating}
+            />
+          ))}
         </div>
       )}
     </div>
