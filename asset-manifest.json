@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/movie_app/static/css/main.2dd3f8e2.css",
+    "main.js": "/movie_app/static/js/main.d31ddeaa.js",
+    "static/media/Pretendard-Regular.otf": "/movie_app/static/media/Pretendard-Regular.ca2c5a97ebe998670619.otf",
+    "index.html": "/movie_app/index.html",
+    "main.2dd3f8e2.css.map": "/movie_app/static/css/main.2dd3f8e2.css.map",
+    "main.d31ddeaa.js.map": "/movie_app/static/js/main.d31ddeaa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2dd3f8e2.css",
+    "static/js/main.d31ddeaa.js"
+  ]
+}
