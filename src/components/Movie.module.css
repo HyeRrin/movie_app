@@ -13,6 +13,7 @@
   background-color: rgb(53, 52, 52);
   padding: 0 0 30px 0;
   border: 1px solid black;
+  text-align: left;
 }
 .card_movie img {
   border-radius: 15px 15px 0 0;
