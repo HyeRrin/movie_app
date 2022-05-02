@@ -21,8 +21,20 @@ function Detail() {
         <h1>Loading...</h1>
       ) : (
         <div>
-          <h1>{movie.title_long}</h1>
+          <h1>{movie.title}</h1>
           <img src={movie.medium_cover_image} alt={movie.title} />
+          <p>개봉 : {movie.year}</p>
+          <p>
+            상영시간 : {Math.floor(movie.runtime / 60)}시간 {movie.runtime % 60}
+            분
+          </p>
+          <p>평점 : {movie.rating}</p>
+          <p>장르 :</p>
+          <ul>
+            {movie.genres.map((g) => (
+              <li key={g}>{g}</li>
+            ))}
+          </ul>
         </div>
       )}
     </div>
