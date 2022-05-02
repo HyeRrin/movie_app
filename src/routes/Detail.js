@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import styles from "../routes/Detail.module.css";
 
 function Detail() {
   const [loading, setLoading] = useState(true);
@@ -18,23 +19,41 @@ function Detail() {
   return (
     <div>
       {loading ? (
-        <h1>Loading...</h1>
+        <div className={styles.loading_main}>
+          <h1>Loading...</h1>
+        </div>
       ) : (
-        <div>
-          <h1>{movie.title}</h1>
-          <img src={movie.medium_cover_image} alt={movie.title} />
-          <p>개봉 : {movie.year}</p>
-          <p>
-            상영시간 : {Math.floor(movie.runtime / 60)}시간 {movie.runtime % 60}
-            분
-          </p>
-          <p>평점 : {movie.rating}</p>
-          <p>장르 :</p>
-          <ul>
-            {movie.genres.map((g) => (
-              <li key={g}>{g}</li>
-            ))}
-          </ul>
+        <div className={styles.main}>
+          <h1 className={styles.title_movie}>{movie.title}</h1>
+          <div className={styles.list_info}>
+            <img src={movie.medium_cover_image} alt={movie.title} />
+            <dl>
+              <div className={styles.info_layout}>
+                <dt>개봉</dt>
+                <dd>{movie.year}년</dd>
+              </div>
+              <div className={styles.info_layout}>
+                <dt>시간</dt>
+                <dd>
+                  {Math.floor(movie.runtime / 60)}시간 {movie.runtime % 60}분
+                </dd>
+              </div>
+              <div className={styles.info_layout}>
+                <dt>평점</dt>
+                <dd className={styles.text_rating}>{movie.rating}</dd>
+              </div>
+              <div className={styles.info_layout}>
+                <dt>장르</dt>
+                <dd>
+                  <ul>
+                    {movie.genres.map((g) => (
+                      <li key={g}>{g}</li>
+                    ))}
+                  </ul>
+                </dd>
+              </div>
+            </dl>
+          </div>
           <button onClick={() => window.open(`${movie.url}`, "_blank")}>
             다운로드 페이지
           </button>
