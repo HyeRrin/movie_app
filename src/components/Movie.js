@@ -1,16 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styles from "../components/Movie.module.css";
 
-function Movie({ id, url, coverImg, title, year, rating }) {
+function Movie({ id, coverImg, title, rating }) {
   return (
-    <div>
-      <Link to={`/movie/${id}`}>
+    <Link to={`/movie/${id}`}>
+      <div className={styles.card_movie}>
         <img src={coverImg} alt={title} />
-      </Link>
-      <h2>{title}</h2>
-      <p>{year}</p>
-      <p>{rating}</p>
-    </div>
+        <h2>{title.length > 20 ? `${title.slice(0, 20)}...` : title}</h2>
+        <div className={styles.box_layout}>
+          <p className={styles.text_rating}>{rating}</p>
+        </div>
+      </div>
+    </Link>
   );
 }
 

@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url("../static/font/Pretendard-Regular.otf");
+}
+* {
+  font-family: "Pretendard";
+}
+.loading_main {
+  width: 100%;
+  height: 100vh;
+  color: white;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+}
+.main {
+  background-color: black;
+  padding: 180px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.loading {
+  font-size: 30px;
+}
+.header {
+  font-family: "Pretendard";
+  text-align: center;
+  color: white;
+  margin-bottom: 70px;
+}
+.header p {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.header a {
+  text-decoration: underline;
+}
+.title {
+  font-size: 55px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  color: rgb(224, 7, 7);
+}
+.title::before {
+  position: absolute;
+  top: 100px;
+  left: 49%;
+  content: "";
+  width: 64px;
+  height: 64px;
+  background: url("../static/icon/video.png") no-repeat 0px 0px;
+  z-index: 100;
+}
+.box_genre {
+  display: inline-block;
+  margin: 0 auto;
+}
+.title_genre {
+  text-align: left;
+  font-family: "Pretendard";
+  font-size: 25px;
+  font-weight: bold;
+  margin: 50px 0 0 10px;
+  padding: 10px;
+  color: white;
+}
